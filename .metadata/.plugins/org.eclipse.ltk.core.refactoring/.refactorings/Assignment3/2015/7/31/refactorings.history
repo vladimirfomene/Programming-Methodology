@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;&apos; to &apos;Breakout.MouseDragged(...)&apos;&#x0D;&#x0A;- Original project: &apos;Assignment3&apos;&#x0D;&#x0A;- Destination element: &apos;Breakout.MouseDragged(...)&apos;&#x0D;&#x0A;- Original element: &apos;Breakout.rowStartX&apos;" description="Copy field" destination="/&lt;{Breakout.java[Breakout~MouseDragged~QMouseEvent;" element1="/&lt;{Breakout.java[Breakout^rowStartX" flags="589830" id="org.eclipse.jdt.ui.copy" members="1" policy="org.eclipse.jdt.ui.copyMembers" stamp="1438320568936" version="1.0"/>
+</session>

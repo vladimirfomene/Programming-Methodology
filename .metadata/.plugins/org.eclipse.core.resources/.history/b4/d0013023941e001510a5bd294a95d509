@@ -1,0 +1,19 @@
+/*
+ *  FILE: AnimatedSquare.java
+ *  This program illustrates how animations can be done in Java
+ *  Move a square from the upper left corner of the window to the lower right corner
+ */
+
+import acm.graphics.*;
+import acm.program.*;
+
+public class AnimatedSquare extends GraphicsProgram{
+	public void run(){
+		
+	}
+	
+	/* Private Constants */
+	private static final int N_STEPS = 1000;
+	private static final int PAUSE_TIME = 20;
+	private static final double SQUARE_SIZE = 50;
+}

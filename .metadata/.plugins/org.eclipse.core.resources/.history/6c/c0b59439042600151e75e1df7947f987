@@ -1,0 +1,45 @@
+/*
+* File : Olympics.java
+* ======================
+* Inspired by the Olympic flag from the textbook
+* Demonstration of use the acm.graphics library.
+*/
+
+import java.awt.*;
+import acm.program.*;
+import acm.graphics.*;
+
+public class Olympics extends GraphicsProgram{
+	
+	public void run(){
+		
+		upperCircle(space, side);	//UpperCircle
+		lowerCircle(space, side);	//LowerCircle
+		
+	}
+	
+	private void lowerCircle(int space, int side){
+		
+		for(int i = 0; i < 2; i++){
+			int offset = (side + space) * i;
+			GOval circle = new GOval(250 + offset, 150, side, side);
+			circle.setColor(Color.BLUE);
+			add(circle);
+		}
+	}
+	
+	private void upperCircle(int space, int side){
+		
+		for(int i = 0; i < 3; i++){
+			int offset = (side + space) * i;
+			GOval circle = new GOval(200 + offset, 100, side, side);
+			circle.setColor(Color.RED);
+			add(circle);
+			
+		}
+	}
+	
+	/** Instance variables ***/
+	private int space = 5;
+	private int side = 100;
+}

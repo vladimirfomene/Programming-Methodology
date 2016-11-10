@@ -1,0 +1,29 @@
+/*
+ * File: Target.java
+ * Name: 
+ * Section Leader: 
+ * -----------------
+ * This file is the starter file for the Target problem.
+ */
+
+import acm.graphics.*;
+import acm.program.*;
+import java.awt.*;
+
+public class Target extends GraphicsProgram {	
+	public void run() {
+		double outerCircleRadius = 72;
+		double middleCircleRadius = 46.8;
+		double innerCircleRadius = 21.6;
+		
+		GOval outerCircle = new GOval(getWidth() - outerCircleRadius, getHeight() - outerCircleRadius, 2 * outerCircleRadius, 2 * outerCircleRadius);
+		outerCircle.setFilled(true);
+		outerCircle.setFillColor(Color.RED);
+		add(outerCircle);
+		
+		GOval middleCircle = new GOval(getWidth() - middleCircleRadius, getHeight() - middleCircleRadius, 2 * middleCircleRadius, 2 * middleCircleRadius);
+		outerCircle.setFilled(true);
+		outerCircle.setFillColor(Color.WHITE);
+		add(middleCircle);
+	}
+}

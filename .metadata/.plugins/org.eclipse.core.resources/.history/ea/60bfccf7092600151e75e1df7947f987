@@ -1,0 +1,55 @@
+/*
+* File : Olympics.java
+* ======================
+* Inspired by the Olympic flag from the textbook
+* Demonstration of use the acm.graphics library.
+*/
+
+import java.awt.*;
+import acm.program.*;
+import acm.graphics.*;
+
+public class Olympics extends GraphicsProgram{
+	
+	public void run(){
+		
+		frame(width, height, frameColor);       //Put up a frame for your flag
+		upperCircle(space, side);	//UpperCircles
+		lowerCircle(space, side);	//LowerCircles
+		addCopyright(text, color); //add copyright material
+		
+	}
+	
+	private void lowerCircle(int space, int side){
+		
+		for(int i = 0; i < 2; i++){
+			int offset = (side + space) * i;
+			GOval circle = new GOval(250 + offset, 150, side, side);
+			circle.setColor(Color.BLUE);
+			add(circle);
+		}
+	}
+	
+	private void upperCircle(int space, int side){
+		
+		for(int i = 0; i < 3; i++){
+			int offset = (side + space) * i;
+			GOval circle = new GOval(200 + offset, 100, side, side);
+			circle.setColor(Color.RED);
+			add(circle);
+			
+		}
+	}
+	
+	private void frame(int width, int height, Color color){
+		
+	}
+	
+	private void addCopyright(String copyright, Color color){
+		
+	}
+	
+	/** Instance variables ***/
+	private int space = 5;
+	private int side = 100;
+}

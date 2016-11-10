@@ -1,0 +1,46 @@
+/*
+ * File: Hangman.java
+ * ------------------
+ * This program will eventually play the Hangman game from
+ * Assignment #4.
+ */
+
+import acm.graphics.*;
+import acm.program.*;
+import acm.util.*;
+
+import java.awt.*;
+
+public class Hangman extends ConsoleProgram {
+	
+	/* Number of Guesses in Hangman */
+	private static final int N_OF_GUESSES = 8;
+    public void run() {
+    	
+		/* You fill this in */
+    	trackGuesses = N_OF_GUESSES;
+    	println("Welcome to Hangman!");
+    	println("The word now looks like this:" + printSecret(secretWord.length()));
+    	println("You have" + trackGuesses + "guesses left.");
+    	
+    	while(!gameIsOver()){
+    		//
+    	}
+    	printOutcome();
+	}
+    
+    private String printSecret(int size){
+    	string result = "";
+    	for(int i = 0; i < size; i++){
+    		result += "_";
+    	}
+    	return result;
+    }
+    
+    /* Private instances */
+    private HangmanLexicon wordList = new HangmanLexicon();
+    private int trackGuesses = 0;
+    private RandomGenerator rgen = RandomGenerator.getInstance();
+    private String secretWord = wordList.getWord(rgen.nextInt(wordList.getWordCount()));
+
+}
