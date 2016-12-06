@@ -35,8 +35,11 @@ public class NameSurfer extends Program implements NameSurferConstants {
 		// Button to clear display
 		add(new JButton("Clear"), SOUTH);
 		
+		JButton graphBtn = new JButton("Graph");
+		graphBtn.setActionCommand("Graph");
+		
 		// Button to graph on display
-		add(new JButton("Graph"), SOUTH);
+		add(graphBtn, SOUTH);
 		//Listen for button action events
 		addActionListeners();
 	}
@@ -54,7 +57,7 @@ public class NameSurfer extends Program implements NameSurferConstants {
 			graph.clear();
 		}
 		
-		if (e.getActionCommand().equals("Graph")) {
+		if (e.getActionCommand().equals("Graph")|| e.getActionCommand().equals("Name")) {
 			graph.addEntry(nameDirectory.findEntry(textField.getText()));
 			// Graph on the canvas
 			graph.update();
